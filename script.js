@@ -11,7 +11,13 @@ getInfo.onclick = function(element) {
 
 function excute() {
     chrome.tabs.executeScript(null, {
-        code: 'var x = document.getElementsByClassName("textarea");var s = new Array();for(let i=0;i<x.length;i++){s[i] = document.getElementsByClassName("textarea")[i].innerHTML;s}'
+        code: '' +
+            'var x = document.getElementsByClassName("title");' +
+            'var s = new Array();s = [[],[]];' +
+            'var idx = 0;for(var i=1;i<x.length;i=i+2){s[0][idx] = document.getElementsByClassName("title")[i].innerHTML;idx+=1;}'+
+            'var x = document.getElementsByClassName("textarea");' +
+            'for(var i=0;i<x.length;i=i+1){s[1][i] = document.getElementsByClassName("textarea")[i].innerHTML;s}'
+
     }, function (result) {
         console.log(result);
         var html = '';

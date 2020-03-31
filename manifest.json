@@ -10,7 +10,7 @@
     "activeTab","tabs","browserAction"
   ],
   "background": {
-    "scripts": ["script.js",{"fileSystem": ["write"]}],"persistent": false
+    "scripts": ["script.js"],"persistent": false
   },
   "manifest_version": 2,
   "commands": {
