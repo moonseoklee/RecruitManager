@@ -12,14 +12,15 @@ getInfo.onclick = function(element) {
 function excute() {
     chrome.tabs.executeScript(null, {
         code: '' +
-            'var x = document.getElementsByClassName("title");' +
+            //'var x = document.getElementsByClassName("title");' +
             'var s = new Array();s = [[],[]];' +
-            'var idx = 0;for(var i=1;i<x.length;i=i+2){s[0][idx] = document.getElementsByClassName("title")[i].innerHTML;idx+=1;}'+
-            'var x = document.getElementsByClassName("textarea");' +
-            'for(var i=0;i<x.length;i=i+1){s[1][i] = document.getElementsByClassName("textarea")[i].innerHTML;s}'
+            //'var idx = 0;for(var i=1;i<5;i=i+2){s[0][idx] = document.getElementsByTagName("textarea")[i].innerHTML;idx+=1;}'+
+            'var x = document.getElementsByTagName("textarea");' +
+            'for(var i=0;i<2;i=i+1){s[0][i] = document.getElementsByTagName("textarea")[i].value;s}'
 
     }, function (result) {
         console.log(result);
+        document.get
         var html = '';
         if (result != null) {
 
