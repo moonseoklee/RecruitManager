@@ -19,7 +19,7 @@ function excute() {
             'for(var i=0;i<2;i=i+1){s[0][i] = document.getElementsByTagName("textarea")[i].value;s}'
 
     }, function (result) {
-        console.log(result);
+
 
         var html = '';
         if (result != null) {
