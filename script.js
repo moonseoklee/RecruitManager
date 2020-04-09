@@ -20,7 +20,7 @@ function excute() {
 
     }, function (result) {
         console.log(result);
-        document.get
+
         var html = '';
         if (result != null) {
 
